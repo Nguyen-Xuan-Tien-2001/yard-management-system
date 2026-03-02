@@ -37,6 +37,10 @@ const App = () => {
         return <DashboardView />;
     }
   };
+  const handleNewEntry = () => {
+    setNotifications(notifications + 1);
+  };
+
 
   return (
     <div className="flex h-screen bg-slate-50 font-sans text-slate-900 overflow-hidden">
@@ -125,7 +129,7 @@ const App = () => {
                 </span>
               )}
             </div>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center transition-colors">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center transition-colors" onClick={handleNewEntry}>
               <Plus size={18} className="mr-2" />
               New Entry
             </button>
